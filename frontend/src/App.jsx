@@ -6,24 +6,26 @@ import Register from './components/Register'
 import Header from './components/header'
 import Footer from './components/footer'
 import Login from './components/login'
+import AuthProvider from './authProvider'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <BrowserRouter>
-    <Header />
-
-    <Routes>
-
-      <Route path = '/' element= {<Content />}/>
-      <Route path='/register' element= {<Register />} />
-      <Route path='/login'  element = {<Login />} />
-    </Routes>
-    <Footer />
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+      <Header />
   
+      <Routes>
+  
+        <Route path = '/' element= {<Content />}/>
+        <Route path='/register' element= {<Register />} />
+        <Route path='/login'  element = {<Login />} />
+      </Routes>
+      <Footer />
+      </BrowserRouter>
+    </AuthProvider>
     </>
   )
 }
