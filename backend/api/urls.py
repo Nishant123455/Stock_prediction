@@ -1,6 +1,7 @@
 from django.urls import path, include
 from account import views as UserViews
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from .views import StockPredictionAPIView
 
 urlpatterns = [
 
@@ -11,4 +12,7 @@ urlpatterns = [
 
     #createion of proceted View to asses private data iof backend by frontend using accessToken and refresh token
     path('protected-view/', UserViews.ProtectedView.as_view()),
+
+    # api path for prediction
+    path('predict/', StockPredictionAPIView.as_view(), name='stock_prediction')
 ]
