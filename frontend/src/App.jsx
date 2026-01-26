@@ -1,15 +1,16 @@
 import { Component, useState } from 'react'
-import Content from './components/content'
 import './assets/css/style.css'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Register from './components/Register'
-import Header from './components/header'
-import Footer from './components/footer'
-import Login from './components/login'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Login from './components/Login'
 import AuthProvider from './authProvider'
 import Dashboard from './components/dashboard/Dashboard'
 import PrivateRoute from './PrivateRoute'
 import PublicRoute from './PublicRoute'
+import Content from './components/Content'
+
 
 function App() {
   const [count, setCount] = useState(0)
