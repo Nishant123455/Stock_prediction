@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import { Link, useNavigate } from 'react-router-dom'
-import { AuthContext } from '../authProvider'
+import { AuthContext } from '../AuthProvider'
 import { useContext } from 'react'
 
 

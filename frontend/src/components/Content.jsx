@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button'
-import Header from './header'
-import Footer from './footer'
+import Header from './Header'
+import Footer from './Footer'
 function Content() {
   return (
     <>

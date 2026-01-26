@@ -1,6 +1,6 @@
 import React,{Children, useContext} from 'react'
 // need login status we need useContext
-import { AuthContext } from './authProvider'
+import { AuthContext } from './AuthProvider'
 import { Navigate } from 'react-router-dom'
 
 
