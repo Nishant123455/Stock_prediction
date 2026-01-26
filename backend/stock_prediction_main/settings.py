@@ -138,7 +138,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://stock-prediction-8-n80r.onrender.com"
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = [
+"https://stock-prediction-8-n80r.onrender.com",
 ]
 
 REST_FRAMEWORK = {
