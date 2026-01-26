@@ -52,7 +52,7 @@ const Dashboard = () => {
             console.log(response.data);
 
             //const backendRoot = import.meta.env.VITE_BACKEND_ROOT // this is backend root path 
-            const backendRoot = import.meta.env.VITE_API_BASE_URL
+            const backendRoot = import.meta.env.VITE_BASE_URL
             const plotUrl = `${backendRoot}${response.data.plot_img}`
             const ma100Url = `${backendRoot}${response.data.plot_100_dma}`
             const ma200Url = `${backendRoot}${response.data.plot_200_dma}`
