@@ -22,11 +22,18 @@ const Register = () => {
              username, email, password
         }
         try{
-            const response =await axios.post('http://127.0.0.1:8000/api/v1/register/', userData) /* there is problem here in this when we send post request to the endpoint we can wait the the response the another line of code run can give response data is not defined so we use async to get response' we use asyn await to wait and take the response then another line of code will run basically it will wait for the backend response' */
+            // const response =await axios.post('http://127.0.0.1:8000/api/v1/register/', userData) /* there is problem here in this when we send post request to the endpoint we can wait the the response the another line of code run can give response data is not defined so we use async to get response' we use asyn await to wait and take the response then another line of code will run basically it will wait for the backend response' */
+            // console.log('response data=> ', response.data)
+            // console.log('registration successfull');
+            // setErrors({})
+            // setSucess(true)
+
+            const response =await axios.post('https://stock-prediction-4-dul2.onrender.com', userData) /* there is problem here in this when we send post request to the endpoint we can wait the the response the another line of code run can give response data is not defined so we use async to get response' we use asyn await to wait and take the response then another line of code will run basically it will wait for the backend response' */
             console.log('response data=> ', response.data)
             console.log('registration successfull');
             setErrors({})
             setSucess(true)
+
         } catch(error){
             setErrors(error.response.data)
             console.error('Registration error:', error.response.data)
