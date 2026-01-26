@@ -24,7 +24,13 @@ const Login = () => {
         console.log(userData)
 
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/v1/token/', userData)
+            // const response = await axios.post('http://127.0.0.1:8000/api/v1/token/', userData)
+            // localStorage.setItem('accessToken', response.data.access)
+            // localStorage.setItem('refreshToken', response.data.refresh)
+            // console.log('Login Success')
+            // setIsLoggedIn(true)
+            // navigate('/dashboard')
+            const response = await axios.post('https://stock-prediction-4-dul2.onrender.com/api/v1/token/', userData)
             localStorage.setItem('accessToken', response.data.access)
             localStorage.setItem('refreshToken', response.data.refresh)
             console.log('Login Success')
